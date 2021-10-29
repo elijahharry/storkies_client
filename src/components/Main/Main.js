@@ -8,7 +8,7 @@ import Promo from "./Promo/Promo";
 
 import { makeStyles } from "@material-ui/core";
 
-const Main = ({ title, desc, keywords, children, dark, color }) => {
+const Main = ({ key, title, desc, keywords, children, dark, color }) => {
   const classes = useStyles();
   const screen = useScreenSize();
 
@@ -17,7 +17,11 @@ const Main = ({ title, desc, keywords, children, dark, color }) => {
       <Head title={title} desc={desc} keyword={keywords} />
       <Promo />
       <Nav dark={dark} />
-      <main className={classes.main} style={{ paddingTop: dark ? 130 : 0 }}>
+      <main
+        key={key ? `${key}-content-main` : "content-main"}
+        className={classes.main}
+        style={{ paddingTop: dark ? 130 : 0 }}
+      >
         {children}
       </main>
       <Footer color={color} />
