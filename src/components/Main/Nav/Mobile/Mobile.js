@@ -67,16 +67,6 @@ const Mobile = ({ dark }) => {
               About
             </Typography>
           </Link>
-          {/* <Link color="primary" href="/partners" passHref>
-            <Typography
-              variant="h3"
-              align="center"
-              color="primary"
-              className={classes.link}
-            >
-              Partners
-            </Typography>
-          </Link> */}
           <a href="/delivery" passHref>
             <Typography
               variant="h3"
