@@ -17,6 +17,7 @@ const Block = ({
   subfolder,
   hoverCount,
   hoverUp,
+  realHref,
 }) => {
   const classes = useStyles();
   const theme = useTheme();
@@ -85,72 +86,138 @@ const Block = ({
       );
   }
 
-  return (
-    <Link href={link} passHref>
-      <motion.a
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onClick={() => setHover(!hover)}
-        className={`${classes.block} ${blockClass}`}
-        style={{ zIndex: zIndex }}
-        transition={{ duration: 0.4 }}
-      >
-        <AnimatePresence>
-          {hover && (
-            <a>
-              <motion.div
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0, transition: { delay: 0.1 } }}
-                transition={{ duration: 0.5 }}
-                className={classes.block__hover}
-                style={{ zIndex: zIndex + 1 }}
+  if (realHref) {
+    <motion.a
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+      onClick={() => setHover(!hover)}
+      className={`${classes.block} ${blockClass}`}
+      style={{ zIndex: zIndex }}
+      transition={{ duration: 0.4 }}
+      href={link}
+    >
+      <AnimatePresence>
+        {hover && (
+          <a>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0, transition: { delay: 0.1 } }}
+              transition={{ duration: 0.5 }}
+              className={classes.block__hover}
+              style={{ zIndex: zIndex + 1 }}
+            >
+              <motion.feature
+                initial={{ scale: 0 }}
+                animate={{ scale: 1 }}
+                exit={{
+                  scale: 0,
+                  transition: { delay: 0 },
+                }}
+                transition={{ type: "spring", duration: 0.8, delay: 0.2 }}
+                className={classes.hover__content}
               >
-                <motion.feature
-                  initial={{ scale: 0 }}
-                  animate={{ scale: 1 }}
-                  exit={{
-                    scale: 0,
-                    transition: { delay: 0 },
-                  }}
-                  transition={{ type: "spring", duration: 0.8, delay: 0.2 }}
-                  className={classes.hover__content}
+                <Typography variant="h3" align="center" gutterBottom>
+                  {title}
+                </Typography>
+                <Typography variant="body1" align="center" gutterBottom>
+                  {desc}
+                </Typography>
+                <Link href={link} passHref>
+                  <Button
+                    variant="contained"
+                    color={color}
+                    className={buttonClass}
+                  >
+                    Learn more
+                  </Button>
+                </Link>
+              </motion.feature>
+            </motion.div>
+          </a>
+        )}
+      </AnimatePresence>
+      <div className={`${classes.block__content} ${overlayClass}`}>
+        {subtitleItem}
+        {titleItem}
+      </div>
+      <Image
+        src={`/images/${img.src}`}
+        placeholder={img?.blur ? "blur" : "empty"}
+        blurDataURL={img?.blur ? img.blur : ""}
+        layout="fill"
+        objectFit="cover"
+        objectPosition="center"
+      />{" "}
+    </motion.a>;
+  } else {
+    return (
+      <Link href={link} passHref>
+        <motion.a
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+          onClick={() => setHover(!hover)}
+          className={`${classes.block} ${blockClass}`}
+          style={{ zIndex: zIndex }}
+          transition={{ duration: 0.4 }}
+        >
+          <AnimatePresence>
+            {hover && (
+              <a>
+                <motion.div
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0, transition: { delay: 0.1 } }}
+                  transition={{ duration: 0.5 }}
+                  className={classes.block__hover}
+                  style={{ zIndex: zIndex + 1 }}
                 >
-                  <Typography variant="h3" align="center" gutterBottom>
-                    {title}
-                  </Typography>
-                  <Typography variant="body1" align="center" gutterBottom>
-                    {desc}
-                  </Typography>
-                  <Link href={link} passHref>
-                    <Button
-                      variant="contained"
-                      color={color}
-                      className={buttonClass}
-                    >
-                      Learn more
-                    </Button>
-                  </Link>
-                </motion.feature>
-              </motion.div>
-            </a>
-          )}
-        </AnimatePresence>
-        <div className={`${classes.block__content} ${overlayClass}`}>
-          {subtitleItem}
-          {titleItem}
-        </div>
-        <Image
-          src={`/images/${img.src}`}
-          placeholder={img?.blur ? "blur" : "empty"}
-          blurDataURL={img?.blur ? img.blur : ""}
-          layout="fill"
-          objectFit="cover"
-          objectPosition="center"
-        />{" "}
-      </motion.a>
-    </Link>
-  );
+                  <motion.feature
+                    initial={{ scale: 0 }}
+                    animate={{ scale: 1 }}
+                    exit={{
+                      scale: 0,
+                      transition: { delay: 0 },
+                    }}
+                    transition={{ type: "spring", duration: 0.8, delay: 0.2 }}
+                    className={classes.hover__content}
+                  >
+                    <Typography variant="h3" align="center" gutterBottom>
+                      {title}
+                    </Typography>
+                    <Typography variant="body1" align="center" gutterBottom>
+                      {desc}
+                    </Typography>
+                    <Link href={link} passHref>
+                      <Button
+                        variant="contained"
+                        color={color}
+                        className={buttonClass}
+                      >
+                        Learn more
+                      </Button>
+                    </Link>
+                  </motion.feature>
+                </motion.div>
+              </a>
+            )}
+          </AnimatePresence>
+          <div className={`${classes.block__content} ${overlayClass}`}>
+            {subtitleItem}
+            {titleItem}
+          </div>
+          <Image
+            src={`/images/${img.src}`}
+            placeholder={img?.blur ? "blur" : "empty"}
+            blurDataURL={img?.blur ? img.blur : ""}
+            layout="fill"
+            objectFit="cover"
+            objectPosition="center"
+          />{" "}
+        </motion.a>
+      </Link>
+    );
+  }
 };
 
 export default Block;

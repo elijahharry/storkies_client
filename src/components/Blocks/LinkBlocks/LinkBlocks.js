@@ -29,6 +29,7 @@ const LinkBlocks = () => {
             hoverCount={hoverCount}
             hoverUp={hoverUp}
             link="/delivery"
+            realHref
           />
         </div>
         <div className={classes.blocks__row}>
