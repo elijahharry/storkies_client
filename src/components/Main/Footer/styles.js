@@ -1,0 +1,198 @@
+import { makeStyles } from "@material-ui/core/styles";
+
+export default makeStyles((theme) => ({
+  footer: {
+    width: "100%",
+    position: "relative",
+    display: "flex",
+    alignItems: "center",
+    overflow: "hidden",
+    zIndex: 0,
+    bottom: 0,
+    // backgroundColor: "#171717",
+    // color: "#fff",
+    borderTop: `1px solid #d3d3d3`,
+    backgroundColor: "#f1f2f3",
+  },
+  footer__border: {
+    position: "absolute",
+    width: "100%",
+    height: 10,
+    top: 0,
+    left: 0,
+    zIndex: 6,
+    transition: "all 300ms",
+  },
+  content: {
+    borderRadius: 200,
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    alignItems: "stretch",
+    position: "relative",
+    // padding: `${theme.spacing(2)}px 16px`,
+    paddingTop: theme.spacing(3),
+    paddingBottom: theme.spacing(4),
+    // [theme.breakpoints.down("sm")]: {
+    //   paddingTop: theme.spacing(3),
+    //   paddingBottom: theme.spacing(1),
+    // },
+  },
+  main: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "stretch",
+    position: "relative",
+    paddingBottom: theme.spacing(3),
+    [theme.breakpoints.down("sm")]: {
+      flexDirection: "column",
+      alignItems: "center",
+      justifyContent: "center",
+    },
+  },
+  text: {
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "flex-end",
+    alignItems: "flex-end",
+    "& span": {
+      fontFamily: "Satisfy",
+      fontSize: "2rem",
+      fontWeight: 900,
+      // color: theme.palette.secondary.main,
+    },
+  },
+  links: {
+    display: "flex",
+    marginTop: "1rem",
+    listStyle: "none",
+    marginInline: 0,
+    marginBlock: 0,
+    paddingInline: 0,
+    flexWrap: "wrap",
+    [theme.breakpoints.down("sm")]: {
+      flexWrap: "wrap",
+      // justifyContent: "center",
+      justifyContent: "space-between",
+      alignItems: "center",
+      marginTop: theme.spacing(2),
+    },
+  },
+  link: {
+    // ...theme.typography.body2,
+    cursor: "pointer",
+    marginLeft: theme.spacing(4),
+    textTransform: "uppercase",
+    fontSize: "1.1rem",
+    letterSpacing: 1,
+    fontWeight: 700,
+    "&:hover": {
+      filter: `drop-shadow(1px 1px 0 ${theme.palette.secondary.main})`,
+    },
+    [theme.breakpoints.down("sm")]: {
+      // marginLeft: 0,
+      margin: `${theme.spacing(1.5)}px ${theme.spacing(5)}px`,
+    },
+  },
+  content_logo: {
+    height: 100,
+    [theme.breakpoints.down("sm")]: {
+      height: "auto",
+      width: "100%",
+      maxWidth: 200,
+    },
+  },
+  copyright: {
+    position: "relative",
+    display: "flex",
+    justifyContent: "flex-end",
+    paddingLeft: 4,
+    "& span": {
+      fontSize: ".9rem",
+    },
+    [theme.breakpoints.down("sm")]: {
+      justifyContent: "center",
+      "& p": {
+        textAlign: "center",
+      },
+    },
+  },
+  copyright_text: {
+    marginTop: theme.spacing(1),
+    fontSize: ".9rem",
+    [theme.breakpoints.down("sm")]: {
+      textAlign: "center",
+      width: "100%",
+    },
+  },
+  shadow: {
+    position: "absolute",
+    zIndex: 10,
+    width: "100%",
+    height: 10,
+    top: -10,
+    boxShadow: `${theme.shadows[20]}, ${theme.shadows[10]}`,
+  },
+  clouds: {
+    height: "100%",
+    position: "absolute",
+    top: 0,
+    left: 0,
+    zIndex: -1,
+    animation: "$clouds-slide 250s infinite linear",
+  },
+  "@keyframes clouds-slide": {
+    "0%": {
+      opacity: 0,
+      transform: "translateX(-40%)",
+    },
+    "1%": {
+      opacity: 0.6,
+      transform: "translateX(-39%)",
+    },
+    "99%": {
+      transform: "translateX(50%)",
+      opacity: 0.6,
+    },
+    "100%": {
+      transform: "translateX(51%)",
+      opacity: 0,
+    },
+  },
+  clouds_static: {
+    height: "100%",
+    position: "absolute",
+    bottom: 0,
+    zIndex: -1,
+    left: "50%",
+    transform: "translateX(-50%)",
+    opacity: 0.7,
+    [theme.breakpoints.down("sm")]: {
+      left: "-20%",
+      transform: "scale(1.2)",
+      height: "auto",
+      width: "100%",
+    },
+  },
+  titles: {
+    marginBottom: theme.spacing(0.2),
+    display: "flex",
+    alignItems: "center",
+  },
+  fly_high: {
+    width: 150,
+    marginRight: 16,
+    marginBottom: 8,
+  },
+  logos: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    justifyContent: "center",
+  },
+  flyhigh: {
+    width: 100,
+    marginTop: 10,
+  },
+}));

@@ -1,0 +1,6 @@
+@font-face {
+  font-family: "Slim Joe Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Slim Joe Regular"), url("Slim Joe.woff") format("woff");
+}
