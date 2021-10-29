@@ -19,12 +19,12 @@ const DeliveryPage = () => {
           }}
         >
           <script src="https://storkies.wm.store​/static/js/embed.js"></script>
-          <Typography variant="h2" align="center" gutterBottom>
+          {/* <Typography variant="h2" align="center" gutterBottom>
             Flight Delayed
           </Typography>
           <Typography variant="h5" align="center">
             Coming soon!
-          </Typography>
+          </Typography> */}
         </Container>
       </section>
     </Main>
