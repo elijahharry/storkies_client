@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
+import { useScreenSize } from "@context/ScreenSize";
 
 import { Button, Typography, useTheme } from "@material-ui/core";
 import useStyles from "./styles";
@@ -21,13 +22,16 @@ const Block = ({
 }) => {
   const classes = useStyles();
   const theme = useTheme();
+  const screen = useScreenSize();
   const [hover, setHover] = useState(false);
   const [zIndex, setZIndex] = useState(hoverCount);
 
   const handleMouseEnter = () => {
-    setHover(true);
-    hoverUp();
-    setZIndex(hoverCount + 2);
+    if (screen.width > 960) {
+      setHover(true);
+      hoverUp();
+      setZIndex(hoverCount + 2);
+    }
   };
 
   const handleMouseLeave = () => {
