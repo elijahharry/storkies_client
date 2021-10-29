@@ -71,6 +71,9 @@ export default makeStyles((theme) => ({
     marginBlock: 0,
     paddingInline: 0,
     flexWrap: "wrap",
+    "& a": {
+      color: theme.palette.text.primary,
+    },
     [theme.breakpoints.down("sm")]: {
       flexWrap: "wrap",
       // justifyContent: "center",

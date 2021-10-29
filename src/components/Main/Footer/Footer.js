@@ -28,17 +28,23 @@ const Footer = ({ color }) => {
             </div> */}
             <ul className={classes.links}>
               <Link href="/about" passHref>
-                <li className={classes.link}>About</li>
+                <a>
+                  <li className={classes.link}>About</li>
+                </a>
               </Link>
               <Link href="/shop" passHref>
-                <li className={classes.link}>Shop</li>
+                <a>
+                  <li className={classes.link}>Shop</li>
+                </a>
               </Link>
               <Link href="/cart" passHref>
-                <li className={classes.link}>Cart</li>
+                <a>
+                  <li className={classes.link}>Cart</li>
+                </a>
               </Link>
-              <Link href="/delivery" passHref>
+              <a href="/delivery">
                 <li className={classes.link}>Delivery</li>
-              </Link>
+              </a>
             </ul>
             <Typography
               className={classes.copyright_text}

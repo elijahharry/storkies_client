@@ -77,7 +77,7 @@ const Mobile = ({ dark }) => {
               Partners
             </Typography>
           </Link> */}
-          <Link href="/delivery" passHref>
+          <a href="/delivery" passHref>
             <Typography
               variant="h3"
               align="center"
@@ -86,7 +86,7 @@ const Mobile = ({ dark }) => {
             >
               Delivery
             </Typography>
-          </Link>
+          </a>
           <Link color="primary" href="/shop" passHref>
             <Typography
               variant="h3"

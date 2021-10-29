@@ -41,9 +41,9 @@ const Footer = ({ color }) => {
               <Link href="shop" passHref>
                 <Typography variant="body1">Merch</Typography>
               </Link>
-              <Link href="/delivery" passHref>
-                <Typography variant="body1">Delivery</Typography>
-              </Link>
+              <Typography href="/delivery" variant="body1">
+                Delivery
+              </Typography>
               <Link href="/cart" passHref>
                 <Typography variant="body1">Cart</Typography>
               </Link>

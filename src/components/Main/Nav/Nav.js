@@ -101,20 +101,11 @@ const Nav = ({ dark }) => {
                 </Link>
                 <CartIcon color={shop} dark={dark} />
               </div>
-              <Link href="/delivery" passHref>
-                {/* <Button
-                  variant="contained"
-                  color={delivery}
-                  className={`${classes.final_nav_link} ${classes.delivery} gradient-${delivery}`}
-                >
-                  Delivery
-                </Button> */}
-                <div className={classes.delivery_button}>
-                  <span className={""}>Delivery</span>
-                  <img src="/svg/indica.svg" />
-                  <span className={classes.weed_circle} />
-                </div>
-              </Link>
+              <a href="/delivery" className={classes.delivery_button}>
+                <span className={""}>Delivery</span>
+                <img src="/svg/indica.svg" />
+                <span className={classes.weed_circle} />
+              </a>
             </div>
           ) : (
             <Mobile dark={dark} />
