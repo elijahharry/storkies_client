@@ -11,7 +11,9 @@ export default makeStyles((theme) => ({
     transition: "border 300ms",
     border: "0px solid #D3D3D3",
     "&:hover": {
-      outline: "8px solid #D3D3D3",
+      [theme.breakpoints.up("md")]: {
+        outline: "8px solid #D3D3D3",
+      },
     },
     minHeight: 425,
     [theme.breakpoints.down("sm")]: {

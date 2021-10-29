@@ -91,7 +91,6 @@ const Block = ({
       <motion.a
         onMouseEnter={handleMouseEnter}
         onMouseLeave={handleMouseLeave}
-        onClick={() => setHover(!hover)}
         className={`${classes.block} ${blockClass}`}
         style={{ zIndex: zIndex }}
         transition={{ duration: 0.4 }}
