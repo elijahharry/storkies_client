@@ -6,8 +6,8 @@ import { Container, Typography } from "@material-ui/core";
 
 const DeliveryPage = () => {
   return (
-    <Main dark={true}>
-      <section>
+    <Main key="delivery-page" dark={true}>
+      <section key="delivery-menu">
         <Container
           maxWidth="lg"
           style={{
