@@ -94,6 +94,10 @@ export default makeStyles((theme) => ({
   column_desc: {
     flexGrow: 1,
     color: "#000",
+    width: "24%",
+    [theme.breakpoints.down("sm")]: {
+      width: "100%",
+    },
   },
   column_img: {
     flexGrow: 0,

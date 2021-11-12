@@ -56,11 +56,7 @@ const Cart = () => {
     <section id="cart" className={classes.cart}>
       <Container maxWidth="lg">
         <div className={classes.header}>
-          <Typography
-            variant="h1"
-            className={classes.header__title}
-            // color="secondary"
-          >
+          <Typography variant="h1" className={classes.header__title}>
             Your Cart
           </Typography>
           <Badge badgeContent={quantity} className={classes.icon__badge}>
@@ -83,7 +79,7 @@ const Cart = () => {
                         <Image
                           layout="fill"
                           objectFit="contain"
-                          objectPosition="center left"
+                          objectPosition="center"
                           src={item.productImage.originalSrc}
                         />
                       </a>
