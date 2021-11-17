@@ -61,7 +61,7 @@ const Head = ({ title, desc, keywords }) => {
       <meta name="theme-color" content="#ffffff" />
       <script
         async
-        src="https://www.googletagmanager.com/gtag/js?id=UA-213122748-1"
+        src={`https://www.googletagmanager.com/gtag/js?id=${process.env.GOOGLE_ANALYTICS}`}
       />
       <script
         dangerouslySetInnerHTML={{
