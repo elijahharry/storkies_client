@@ -14,6 +14,7 @@ module.exports = {
     MAILCHIMP_API_KEY: process.env.MC_API,
     MAILCHIMP_API_SERVER: process.env.MC_SERVER,
     MAILCHIMP_AUDIENCE_ID: process.env.MC_ID,
+    GOOGLE_ANALYTICS: process.env.GOOGLE_ANAYLTICS_ID,
   },
   async redirects() {
     return [

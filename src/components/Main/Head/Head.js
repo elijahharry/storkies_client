@@ -8,7 +8,10 @@ const Head = ({ title, desc, keywords }) => {
       ) : (
         <title>Storkies | Fly High</title>
       )}
-      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+      <meta
+        name="viewport"
+        content="minimum-scale=1, initial-scale=1, width=device-width"
+      />{" "}
       {desc ? (
         <meta name="description" content={desc} />
       ) : (
@@ -56,6 +59,18 @@ const Head = ({ title, desc, keywords }) => {
       <meta name="msapplication-TileColor" content="#f1f1f1" />
       <meta name="msapplication-config" content="/fav/browserconfig.xml" />
       <meta name="theme-color" content="#ffffff" />
+      <script
+        async
+        src="https://www.googletagmanager.com/gtag/js?id=UA-213122748-1"
+      />
+      <script
+        dangerouslySetInnerHTML={{
+          __html: `window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${process.env.GOOGLE_ANALYTICS}');`,
+        }}
+      />
     </NextHead>
   );
 };
