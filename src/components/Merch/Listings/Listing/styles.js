@@ -9,9 +9,9 @@ export default makeStyles((theme) => ({
     zIndex: 1,
     "&:hover": {
       zIndex: 2,
-      filter: "drop-shadow(0 0 80px #000)",
+//       filter: "drop-shadow(0 0 80px #000)",
       [theme.breakpoints.down("sm")]: {
-        filter: "drop-shadow(0 0 50px #0000001a)",
+//         filter: "drop-shadow(0 0 50px #0000001a)",
       },
     },
     [theme.breakpoints.down("md")]: {
