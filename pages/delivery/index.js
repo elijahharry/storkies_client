@@ -18,8 +18,8 @@ const DeliveryPage = () => {
             alignItems: "center",
           }}
         >
-          <script src="https://storkies.wm.store​/static/js/embed.js"></script>
-        </Container>
+<div><script async="" id="dutchie--embed__script" src="https://dutchie.com/api/v2/embedded-menu/619eb1cbf539ef00a1b12c96.js"></script></div>
+       </Container>
       </section>
     </Main>
   );
