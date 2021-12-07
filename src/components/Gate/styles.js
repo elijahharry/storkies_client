@@ -9,6 +9,7 @@ export default makeStyles((theme) => ({
     height: "100%",
     zIndex: 20,
     backdropFilter: "blur(15px)",
+    backgroundColor: "rgba(11, 51, 8, .7)",
   },
   disclaimer: {
     color: "#d3d3d3",
@@ -38,11 +39,11 @@ export default makeStyles((theme) => ({
     width: 230,
   },
   paper: {
+    border: `2px solid #242424`,
     backgroundColor: "#fff",
     position: "relative",
     borderRadius: "50%",
-    borderWidth: "0px",
-    boxShadow: theme.shadows[4],
+    boxShadow: theme.shadows[10],
     padding: 40,
     display: "flex",
     flexDirection: "column",

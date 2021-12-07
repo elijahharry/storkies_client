@@ -6,10 +6,8 @@ import { Typography, useTheme, Container } from "@material-ui/core";
 import useStyles from "./styles";
 
 const Footer = ({ color }) => {
-  const screen = useScreenSize();
   const classes = useStyles();
   const date = new Date().getFullYear();
-  const theme = useTheme();
 
   return (
     <footer id="footer" className={classes.footer}>

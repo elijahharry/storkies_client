@@ -50,9 +50,6 @@ const useStyles = makeStyles(() =>
         [theme.breakpoints.up("lg")]: {
           maxWidth: 1280,
         },
-        // [theme.breakpoints.up("xl")]: {
-        //   maxWidth: 1280,
-        // },
       },
       ".grey": {
         backgroundColor: "#f9f9f9",

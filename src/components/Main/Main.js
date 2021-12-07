@@ -10,7 +10,6 @@ import { makeStyles } from "@material-ui/core";
 
 const Main = ({ key, title, desc, keywords, children, dark, color }) => {
   const classes = useStyles();
-  const screen = useScreenSize();
 
   return (
     <>

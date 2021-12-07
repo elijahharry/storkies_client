@@ -1,18 +1,17 @@
 import React from "react";
-import Nav from "@components/Main/Nav/Nav";
 import Head from "@components/Main/Head/Head";
 import Menu from "@components/Menu/Menu";
 import Promo from "@components/Main/Promo/Promo";
+import Main from "@components/Main/Main";
 
 const DeliveryPage = () => {
   return (
     <>
       <Head title="Delivery" />
       <Promo />
-      <Nav dark={true} />
-      <main>
+      <Main dark={true} title="Delivery">
         <Menu />
-      </main>
+      </Main>
     </>
   );
 };

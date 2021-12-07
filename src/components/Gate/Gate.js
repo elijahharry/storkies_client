@@ -51,6 +51,7 @@ const Gate = () => {
   return (
     <Fade in={open} timeout={{ appear: 0, enter: 0, exit: 1000 }}>
       <section id="agegate" className={classes.age_verification}>
+        <div className={classes.test}>Hello ther</div>
         <div className={classes.prompt}>
           <div className={classes.paper}>
             <img
