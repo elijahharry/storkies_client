@@ -1,6 +1,6 @@
 
 # Storkies
-
+### View Backend
 Storkies is a lifestyle brand and cannabis delivery service based out of California. I was hired to build them a website/application which utilizes numerous APIs and technologies which providing the owners with complete control and editing capabilities over various aspects of the site.
 I'll break the sections of the websites up into chunks, and explain exactly what is utilized for each one.
 
