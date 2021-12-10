@@ -1,8 +1,9 @@
 
 # Storkies
-### View Backend
 Storkies is a lifestyle brand and cannabis delivery service based out of California. I was hired to build them a website/application which utilizes numerous APIs and technologies which providing the owners with complete control and editing capabilities over various aspects of the site.
 I'll break the sections of the websites up into chunks, and explain exactly what is utilized for each one.
+
+[View the backend for this website](https://github.com/elijahharry/storkies_server)
 
 ## Shop Pages (/shop, /cart, etc)
 The merch shop utilizes the Shopify Storefront API as a headless CMS, effectively providing a dashboard where my client can update products, manage orders, etc on their own. More benefits include a safe and secure checkout system handled via Shopify. Shop data is grabbed via the Storefront API in getStaticProps with GraphQL, and the associated pages are statically generated. Product recommendations are generated via an NextJS api route, utilizing a sort function I created. Users' carts are saved in local storage for reference later.
